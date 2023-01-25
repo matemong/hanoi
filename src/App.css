@@ -50,6 +50,10 @@
   position: relative;
   padding-left: 20px;
   padding-right: 20px;
+  height: 150px;
+  width: 200px;
+  border: 2px solid #666;
+  padding-top: 2rem;
   cursor: pointer;
 }
 
@@ -61,22 +65,35 @@
   height: 150px;
   width: 5px;
   background-color: white;
-  z-index: -1;
+  z-index: 1;
 }
 
 .tower:hover > .line {
-  background-color: #666;
+  background-color: #555;
+}
+.tower:hover {
+  background-color: #111;
+}
+.tower.selected{
+  background-color: #999;
+}
+.tower:hover.selected{
+  background-color: #777;
 }
 
 .discs {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
+  justify-content: end;
+  height: 100%;
   gap: 3px;
-  z-index: 1;
+  z-index: 2;
 }
 
 .disc {
   height: 20px;
-  background-color: blue;
+  border-radius: 10px;
+  z-index: 2;
+  /* background-color: blue; */
 }
