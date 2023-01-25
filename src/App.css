@@ -40,8 +40,43 @@
   color: #888;
 }
 
-.towers{
+.towers {
   display: flex;
   flex-direction: row;
-  gap: 30px;
+  gap: 100px;
+}
+
+.tower {
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.tower > .line {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 0px;
+  height: 150px;
+  width: 5px;
+  background-color: white;
+  z-index: -1;
+}
+
+.tower:hover > .line {
+  background-color: #666;
+}
+
+.discs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  z-index: 1;
+}
+
+.disc {
+  height: 20px;
+  background-color: blue;
 }

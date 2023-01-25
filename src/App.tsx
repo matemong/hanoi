@@ -10,7 +10,18 @@ function App() {
       <div className="towers">
         {towers.map((towerHeight, index) => (
           <div key={index} className="tower">
-            {towerHeight}
+
+            <div className="line"></div>
+            <div className="discs">
+              {[...new Array(towerHeight)].map((disc, idx) => (
+                <div
+                  className="disc"
+                  style={{
+                    width: `${idx * 25 + 25}px`,
+                  }}
+                ></div>
+              ))}
+            </div>
           </div>
         ))}
       </div>
