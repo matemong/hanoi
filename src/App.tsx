@@ -22,10 +22,12 @@ function App() {
         setSelectedTowerIndex(undefined);
         return;
       }
-      if (selectedTower.length === 0) { setSelectedTowerIndex(undefined) 
-        return;}
+      if (selectedTower.length === 0) {
+        setSelectedTowerIndex(undefined);
+        return;
+      }
       const newTowers = [...towers];
-     
+
       const poppedDisc = newTowers[selectedTowerIndex].pop();
       newTowers[clickedTowerIndex].push(poppedDisc!);
       setTowers(newTowers);
@@ -53,7 +55,7 @@ function App() {
             <div className="line"></div>
             <div className="discs">
               {discs.map((discNumber) => {
-                const color = colorLookup[discNumber-1];
+                const color = colorLookup[discNumber - 1];
                 return (
                   <div
                     key={discNumber}
