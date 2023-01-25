@@ -39,3 +39,9 @@
 .read-the-docs {
   color: #888;
 }
+
+.towers{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
